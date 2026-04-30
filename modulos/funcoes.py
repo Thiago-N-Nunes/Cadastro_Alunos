@@ -27,25 +27,25 @@ def listar():
 #Consultar Aluno
 def consultar():
     verificacao()
+    aluno_desejado = input('Nome do Aluno: ')
     for aluno in alunos:
-        aluno_desejado = input('Nome do Aluno: ')
         if aluno_desejado.lower() == aluno['nome'].lower():
             print(f'Nome: {aluno["nome"]} | Idade: {aluno["idade"]} | Nota: {aluno["nota"]}')
             break
-        else:
-            print('Aluno não encontrado')
-            break
+    else:
+        print('Aluno não encontrado')
+            
 
 #Remover Aluno
 def remover():
     verificacao()
-    for aluno in alunos:
-        aluno_desejado = input('Nome do Aluno: ')
+    aluno_desejado = input('Nome do Aluno: ')
+    for aluno in alunos:    
         if aluno_desejado.lower() == aluno['nome'].lower():
             alunos.remove(aluno)
             print('Aluno removido')
-            return
-        else:
-            print('Aluno não encontrado')
             break
+    else:
+        print('Aluno não encontrado')
+            
 

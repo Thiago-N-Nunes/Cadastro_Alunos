@@ -3,6 +3,7 @@ from modulos import funcoes
 while True:
     print('\nCadastro de alunos')
     opcoes = int(input('\n1 - Cadastrar Aluno\n2 - Listar Alunos\n3 - Consultar\n4 - Remover Aluno\n5 - Fechar\n'))
+    print('='*30)
     match opcoes:
         case 1:
             funcoes.cadastrar()
