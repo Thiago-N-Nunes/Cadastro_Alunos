@@ -31,6 +31,7 @@ def consultar():
         aluno_desejado = input('Nome do Aluno: ')
         if aluno_desejado.lower() == aluno['nome'].lower():
             print(f'Nome: {aluno["nome"]} | Idade: {aluno["idade"]} | Nota: {aluno["nota"]}')
+            break
         else:
             print('Aluno não encontrado')
             break
@@ -43,6 +44,8 @@ def remover():
         if aluno_desejado.lower() == aluno['nome'].lower():
             alunos.remove(aluno)
             print('Aluno removido')
+            return
         else:
             print('Aluno não encontrado')
             break
+
